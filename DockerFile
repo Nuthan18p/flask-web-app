@@ -1,0 +1,8 @@
+FROM python:3.14.0a2-slim
+WORKDIR /flaskapp
+
+COPY app.py requirment.txt /flaskapp/
+
+RUN pip install -r requirment.txt
+
+CMD [ "python","app.py" ]
